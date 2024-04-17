@@ -9,10 +9,12 @@ import Projects from '../components/Projects';
 import Timeline from '../components/Timeline';
 import Testimonial from '../components/Testimonial';
 import Contact from '../components/Contact';
+import CustomCursor from '../components/CustomCursor';
+
 function Home() {
     const params = useParams();
     const navigate = useNavigate();
-    
+
     const userId = '65b3a22c01d900e96c4219ae'; //John doe
 
     const BASE_URL = 'https://portfolio-backend-30mp.onrender.com/api/v1';
@@ -42,10 +44,8 @@ function Home() {
 
         fetchUserData();
     }, [params?.user, userId, navigate]);
-    console.log(user);
 
-
-// filtering all the data from the API
+    // filtering all the data from the API
     const sortedFilteredSkills = user?.skills?.filter((item) => item.enabled)?.sort((a, b) => a.sequence - b.sequence);
     const sortedFilteredProject = user?.projects?.filter((item) => item.enabled)?.sort((a, b) => a.sequence - b.sequence);
     const filteredServices = user?.services?.filter((item) => item.enabled);
@@ -53,22 +53,23 @@ function Home() {
     const filteredSocialHandles = user?.social_handles?.filter((item) => item.enabled);
     const filteredEducation = user?.timeline?.filter((item) => item.forEducation && item.enabled);
     const filteredExperience = user?.timeline?.filter((item) => !item.forEducation && item.enabled);
-
     if (isLoading) {
         return <div className="w-full h-screen bg-black flex items-center justify-center text-center">Loading..</div>;
     }
+
     return (
-        <>
+        <div>
+            <CustomCursor />
             <Header />
-            <Hero />
-            <About />
-            <Skills />
-            <Projects />
-            <Services />
-            <Timeline />
-            <Testimonial />
-            <Contact />
-        </>
+            <Hero props={user} />
+            <About props={user} />
+            <Skills props={sortedFilteredSkills} />
+            <Projects props={sortedFilteredProject} />
+            <Services props={filteredServices} />
+            <Timeline props={{ filteredEducation, filteredExperience }} />
+            <Testimonial props={filteredTestimonials} />
+            <Contact props={user.about} />
+        </div>
     );
 }
 
