@@ -4,7 +4,7 @@ import { Skillcard } from './Skillcard';
 function Skills({ props }) {
     return (
         <div className="flex flex-col gap-5 p-2" id="skills">
-            <div className="w-[320px] self-center flex justify-center overflow-hidden">
+            <div className="w-[320px] text-center self-center flex justify-center overflow-hidden">
                 <motion.h1
                     className="w-[300px] relative text-[45px] font-semibold "
                     initial={{ left: '-200px' }}

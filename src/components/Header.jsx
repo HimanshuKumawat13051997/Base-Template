@@ -19,9 +19,17 @@ function Header() {
     };
 
     return (
-        <div className="flex w-full md:justify-around h-[80px] items-center justify-center md:gap-0 gap-[70vw] fixed top-0 bg-[#16161a] z-10">
+        <div className="flex md:text-[25px] text-[18px] w-full md:justify-around h-[80px] items-center justify-center md:gap-0 gap-[70vw] fixed top-0 bg-[#16161a] z-10">
             <div>©/2024</div>
             <div className="md:flex md:gap-3 lg:gap-8 gap-2 hidden">
+                <span
+                    className="hover:line-through"
+                    onClick={() => {
+                        handleScrollToAbout('hero');
+                    }}
+                >
+                    Home
+                </span>
                 <span
                     className="hover:line-through"
                     onClick={() => {
@@ -38,14 +46,14 @@ function Header() {
                 >
                     Skills
                 </span>
-                <span
+                {/* <span
                     className="hover:line-through"
                     onClick={() => {
                         handleScrollToAbout('services');
                     }}
                 >
                     Services
-                </span>
+                </span> */}
                 <span
                     className="hover:line-through"
                     onClick={() => {
@@ -54,22 +62,22 @@ function Header() {
                 >
                     Projects
                 </span>
-                <span
+                {/* <span
                     className="hover:line-through"
                     onClick={() => {
                         handleScrollToAbout('timeline');
                     }}
                 >
                     Timeline
-                </span>
-                <span
+                </span> */}
+                {/* <span
                     className="hover:line-through"
                     onClick={() => {
                         handleScrollToAbout('testi');
                     }}
                 >
                     Testimonial
-                </span>
+                </span> */}
                 <span
                     className="hover:line-through"
                     onClick={() => {
@@ -110,6 +118,14 @@ function Header() {
                 <span
                     className="hover:line-through"
                     onClick={() => {
+                        handleScrollToAbout('hero');
+                    }}
+                >
+                    Home
+                </span>
+                <span
+                    className="hover:line-through"
+                    onClick={() => {
                         handleScrollToAbout('about');
                     }}
                 >
@@ -123,14 +139,14 @@ function Header() {
                 >
                     Skills
                 </span>
-                <span
+                {/* <span
                     className="hover:line-through"
                     onClick={() => {
                         handleScrollToAbout('services');
                     }}
                 >
                     Services
-                </span>
+                </span> */}
                 <span
                     className="hover:line-through"
                     onClick={() => {
@@ -139,7 +155,7 @@ function Header() {
                 >
                     Projects
                 </span>
-                <span
+                {/* <span
                     className="hover:line-through"
                     onClick={() => {
                         handleScrollToAbout('timeline');
@@ -154,7 +170,7 @@ function Header() {
                     }}
                 >
                     Testimonial
-                </span>
+                </span> */}
                 <span
                     className="hover:line-through"
                     onClick={() => {

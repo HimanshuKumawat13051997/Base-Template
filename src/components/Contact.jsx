@@ -7,7 +7,7 @@ import { FaLocationCrosshairs } from 'react-icons/fa6';
 function Contact({ props }) {
     return (
         <section className="flex flex-col items-center pb-[50px] bg-[#242629]" id="contact">
-            <div className="w-[320px] self-center flex justify-center overflow-hidden">
+            <div className="w-[320px] text-center self-center flex justify-center overflow-hidden">
                 <motion.h1
                     className="w-[300px] relative text-[45px] font-semibold "
                     initial={{ right: '-300px' }}
@@ -22,7 +22,7 @@ function Contact({ props }) {
                     <div>
                         <h3 className="text-xl font-semibold mb-4">Get in Touch</h3>
                         <p className="text-[#94a1b2] mb-4 text-justify">
-                            We'd love to hear from you. Whether you have a question about our services, want to give us feedback, or just want to say
+                            I would love to hear from you. Whether you have a question about my work, want to give us feedback, or just want to say
                             hi, we'll get back to you as soon as possible.
                         </p>
                         <ul className="text-[#94a1b2] ">

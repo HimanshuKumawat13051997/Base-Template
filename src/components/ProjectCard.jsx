@@ -3,13 +3,13 @@ import { IoChevronForwardCircleOutline } from 'react-icons/io5';
 
 export const ProjectCard = ({ props }) => {
     return (
-        <div className="bg-[#16161a] shadow-2xl p-5 w-[280px] h-auto rounded-md flex flex-col items-center">
-            <div className="w-[240px]">
-                <img src={props.image.url} alt="" className="rounded" />
+        <div className="bg-[#16161a] shadow-2xl p-5 w-[280px] rounded-md flex flex-col items-center h-[400px] gap-3">
+            <div className="w-[240px] h-[100px] overflow-hidden rounded ">
+                <img src={props.image} alt="" className="rounded " />
             </div>
             <div className=" text-start mt-2 text-lg font-semibold self-start ">
-                <Link to={props.liveurl} className="flex flex-row items-center gap-2">
-                    <span>{props.title}</span>
+                <Link to={props.link} className="flex flex-row items-center gap-2">
+                    <span className="text-[16px]">{props.title}</span>
                     <span>
                         <IoChevronForwardCircleOutline />
                     </span>

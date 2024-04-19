@@ -4,7 +4,7 @@ import { ProjectCard } from './ProjectCard';
 function Projects({ props }) {
     return (
         <div className="flex flex-col bg-[#242629] py-10" id="projects">
-            <div className="w-[320px] self-center flex justify-center overflow-hidden">
+            <div className="w-[320px] text-center self-center flex justify-center overflow-hidden">
                 <motion.h1
                     className="w-[300px] relative text-[45px] font-semibold "
                     initial={{ right: '-200px' }}
@@ -15,7 +15,7 @@ function Projects({ props }) {
                 </motion.h1>
             </div>
             <div className="sm:mx-[55px] md:mx-[60px] lg:mx-[120px] mx-[10px]">
-                <ul className="flex h-[500px] overflow-x-scroll py-[20px] flex-[0_0_600px], mx-auto">
+                <ul className="flex h-[450px] overflow-x-scroll py-[20px] flex-[0_0_600px] mx-auto">
                     {props.map((item, index) => {
                         return (
                             <motion.li
